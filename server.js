@@ -10,3 +10,8 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// Set Handlebars.
+var exhb = require("express-handlebars");
+
+app.engine("handlebars", exhb({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
