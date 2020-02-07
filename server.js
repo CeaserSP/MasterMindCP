@@ -15,3 +15,13 @@ var exhb = require("express-handlebars");
 
 app.engine("handlebars", exhb({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
+// _________________ROUTES______________________
+// Import routes and give the server access to them.
+
+
+// Start our server so that it can begin listening to client requests.
+app.listen(PORT, function() {
+    // Log (server-side) when our server has started
+    console.log("Server listening on: http://localhost:" + PORT);
+  });
