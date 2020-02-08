@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/CeaserSP/MasterMindCP/issues"
   },
-  "homepage": "https://github.com/CeaserSP/MasterMindCP#readme"
+  "homepage": "https://github.com/CeaserSP/MasterMindCP#readme",
+  "dependencies": {
+    "node-modules": "^1.0.1"
+  }
 }
