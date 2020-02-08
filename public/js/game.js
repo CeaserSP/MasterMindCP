@@ -18,11 +18,22 @@ $("#btn-rules").on('click', function(event){
 // 2 Arrays for generate code to be broken and user guesses
 var code = [];
 var guess = [];
+
 // hints
+var incrementHint = 1;
 
 // increment rows
+var incrementRound = 1;
 
 // user slots
+var slot = {
+    1: "red",
+    2: "blue",
+    3: "green",
+    4: "orange",
+    5: "pink",
+    6: "yellow"
+};
 
 // ___________FUNCTIONS_____________
 
