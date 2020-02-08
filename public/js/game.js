@@ -39,7 +39,9 @@ $(function () {
     // ___________FUNCTIONS_____________
 
     // game setup
+    $(function gameSetup() {
 
+    });
     //  generate random code to be broken
     $(function generateCode() {
         for (i = 0; i < 4; i++) {
@@ -47,13 +49,23 @@ $(function () {
         }
     });
     // insert user guess
+    $(function userGuess() {
 
+    });
     // compare user guess to code
+    $(function compare() {
 
+    });
     // display hints
+    $(function displayHint() {
 
+    });
     // new game reset board generate new code
+    $(function newGame() {
 
+    });
     // setup end game 
+    $(function results() {
 
+    });
 });
