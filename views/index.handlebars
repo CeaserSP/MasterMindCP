@@ -2,15 +2,41 @@
     <div class="jumbotron" id="start-game">
         <h1>Welcome to Mastermind!</h1>
         <button type="button" class="btn btn-primary" id='btn-start'>START</button>
-        <button type="button" class="btn btn-secondary">RULES</button>
-        <button type="button" class="btn btn-light">HISTORY</button>
+        <button type="button" class="btn btn-secondary" id="btn-rule">RULES</button>
+        <a href="https://en.wikipedia.org/wiki/Mastermind_(board_game)" class="btn btn-secondary active" role="button"
+            aria-pressed="true">HISTORY</a>
     </div>
     <div class="jumbotron" id="in-game">
         <h1>Mastermind</h1>
-        <button type="button" class="btn btn-primary">START</button>
-        <button type="button" class="btn btn-secondary">RULES</button>
+        <button type="button" class="btn btn-primary " id="btn-restart">RESTART</button>
+        <button type="button" class="btn btn-secondary" id="btn-rules">RULES</button>
+    </div>
+    <div id="rules-text">
+        <ul>
+            <li>Objective Crack the Code!<br>
+            <bold>Your objective is to use the 6 cors provided with the hints provided at the end of each round to
+                    crack the code.</bold><br>
+                <small>The Code is automatically generated at the begining of the game. It is revealed at the end of the
+                    game.</small>
+            </li>
+            <li>
+                1. Select 4 colors at the bottom of the board.
+            </li>
+            <li>
+                2. Each row represents a round. At the end of each round you will be given hints.<br>
+                <small>Hints: White represents - correct position and color. Gray represents - correct color but in the
+                    wrong position. Black represents - a color not in the Code.</small>
+            </li>
+            <li>
+                3. Use the hints to direct your guess for the next round.
+            </li>
+            <li>
+                4. Good luck! If you are unable to crack the code the game resets and you can play again.
+                <small>The code will be regenerated, so you will not be cracking the same code.</small>
+            </li>
+        </ul>
     </div>
     <div class="main-container">
-        <p>stuff here</p>
+
     </div>
 </div>

@@ -5,3 +5,7 @@
 .main-container{
     display: none;
 }
+
+#rules-text{
+    display: none;;
+}

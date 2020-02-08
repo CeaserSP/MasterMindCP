@@ -5,4 +5,6 @@ router.get("/", function(req, res) {
     res.render('index');
 });
 
+// post route to track user wins and losses
+
 module.exports = router;
