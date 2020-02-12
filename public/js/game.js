@@ -40,12 +40,14 @@ $(function () {
 
     // game setup
     $(function gameSetup() {
+generateCode(1,6);
+
 
     });
-    //  generate random code to be broken
-    $(function generateCode() {
+    //  a proper generate random code to be broken
+    $(function generateCode(min, max) {
         for (var i = 0; i < 4; i++) {
-            code[i] = Math.floor(Math.random() * 7);
+            code[i] = Math.floor(Math.random() * (min-max + 1) + min);
         }
     });
     // insert user guess
@@ -54,9 +56,9 @@ $(function () {
         var brdSlot = guessRow[guessRow.length - incrementRound].getElementsByClassName("receptor");
         // insert slot into the corresponding board slot
         console.log(brdSlot[guess.length].className = brdSlot[guess.length].className + 'slot' + this.id);
+        brdSlot[guess.length].className = brdSlot[guess.length].className + 'slot' + this.id
         // insert user guess as value
         guess.push(+(this.value));
-
     });
     // console.log(userGuess);
     // compare user guess to code
