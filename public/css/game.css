@@ -2,9 +2,9 @@
     display: none;
 }
 
-.main-container{
+/* .main-container{
     display: none;
-}
+} */
 
 #rules-text{
     display: none;
@@ -23,30 +23,36 @@
     background-color: lightgray;
 }
 .receptor{
-
+height: 100px;
+width: 100px;
+background-color: darkgray;
+display: inline-block;
 }
-
+.button{
+    height: 50px;
+    width: 70px;
+}
+.red,
 #red{
-background-color: red;
-height: 25px;
+background: red
 }
+.blue
 #blue{
-    background-color: blue;
-    height: 25px;
+    background: blue;
 }
+.green,
 #green{
-    background-color: green;
-    height: 25px;
+    background: green;
 }
+.orange,
 #orange{
-    background-color: orange;
-    height: 25px;
+    background: orange;
 }
+.pink,
 #pink{
-    background-color: pink;
-    height: 25px;
+    background: pink;
 }
+.yellow,
 #yellow{
-    background-color: yellow;
-    height: 25px;
+    background: yellow;
 }

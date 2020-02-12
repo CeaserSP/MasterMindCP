@@ -1,8 +1,8 @@
-$('#btn-start').on('click', function (event) {
-    $("#start-game").hide();
-    $("#in-game").show();
-    $(".main-container").show();
-});
+// $('#btn-start').on('click', function (event) {
+//     $("#start-game").hide();
+//     $("#in-game").show();
+//     $(".main-container").show();
+// });
 
 $("#btn-restart").on('click', function (event) {
     // new game function
@@ -15,11 +15,12 @@ $("#btn-rules").on('click', function (event) {
     $("#rules-text").toggle();
 });
 
-$(function () {
+$(document).ready(function(){
     // 2 Arrays for generate code to be broken and user guesses
     var code = [];
     var guess = [];
     var guessRow = document.getElementsByClassName("guess-row");
+    var btns = document.getElementsByClassName('button');
     // hints
     var incrementHint = 1;
 
@@ -37,44 +38,78 @@ $(function () {
     };
 
     // ___________FUNCTIONS_____________
-
-    // game setup
-    $(function gameSetup() {
-generateCode(1,6);
-
-
+    $("#btn-start").on('click', function (event) {
+        $("#start-game").hide();
+        $("#in-game").show();
+        $(".main-container").show();
+        newGame();
     });
-    //  a proper generate random code to be broken
-    $(function generateCode(min, max) {
-        for (var i = 0; i < 4; i++) {
-            code[i] = Math.floor(Math.random() * (min-max + 1) + min);
-        }
-    });
-    // insert user guess
-    $(function userGuess() {
+    $(".button").on('click', function (event) {
         // get the current set of slots for the round
         var brdSlot = guessRow[guessRow.length - incrementRound].getElementsByClassName("receptor");
         // insert slot into the corresponding board slot
-        console.log(brdSlot[guess.length].className = brdSlot[guess.length].className + 'slot' + this.id);
-        brdSlot[guess.length].className = brdSlot[guess.length].className + 'slot' + this.id
+
+        brdSlot[guess.length].className = brdSlot[guess.length].className + " " + $(this).attr('id');;
+        console.log(brdSlot[guess.length].className);
         // insert user guess as value
         guess.push(+(this.value));
+        // console.log(this.value);
     });
+    // game setup
+    function gameSetup() {
+        generateCode(1, 6);
+
+        // get button clicked insert into receptor
+        // $(".button").on('click', function (event) {
+        //     userGuess();
+        //     console.log("?????????", userGuess(), $(this).attr('id'));
+        // });
+        // $("#btn-start").on('click', function (event) {
+        //     $("#start-game").hide();
+        //     $("#in-game").show();
+        //     $(".main-container").show();
+        //     newGame();
+        // })
+        // for (var i = 0; i < btns.length; i++) {
+        //     btns[i].addEventListener('click', userGuess, false);
+        // }
+    };
+    //  a proper generate random code to be broken
+    function generateCode(min, max) {
+        for (var i = 0; i < 4; i++) {
+            code[i] = Math.floor(Math.random() * (min - max + 1) + min);
+        }
+    };
+    // insert user guess
+    // function userGuess() {
+    //     // get the current set of slots for the round
+    //     var brdSlot = guessRow[guessRow.length - incrementRound].getElementsByClassName("receptor");
+    //     // insert slot into the corresponding board slot
+
+    //     brdSlot[guess.length].className = brdSlot[guess.length].className + " " + $(this).attr('id');;
+    //     console.log(brdSlot[guess.length].className);
+    //     // insert user guess as value
+    //     guess.push(+(this.value));
+    //     // console.log(this.value);
+    // };
     // console.log(userGuess);
     // compare user guess to code
-    $(function compare() {
+    function compare() {
 
-    });
+    };
     // display hints
-    $(function displayHint() {
+    function displayHint() {
 
-    });
+    };
     // new game reset board generate new code
-    $(function newGame() {
-
-    });
+    function newGame() {
+        guess = []
+        incrementHint = 1
+        incrementRound = 1
+        gameSetup();
+    };
     // setup end game 
-    $(function results() {
+    function results() {
 
-    });
+    };
 }); 
