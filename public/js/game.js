@@ -20,12 +20,11 @@ $(function () {
     var code = [];
     var guess = [];
     var guessRow = document.getElementsByClassName("guess-row");
-console.log("^^^^^^^^^^^^^",guessRow);
     // hints
-    var incrementHint = 0;
+    var incrementHint = 1;
 
     // increment rows
-    var incrementRound = 0;
+    var incrementRound = 1;
 
     // user slots
     var slot = {
@@ -51,11 +50,13 @@ console.log("^^^^^^^^^^^^^",guessRow);
     });
     // insert user guess
     $(function userGuess() {
-        console.log(guessRow);
         // get the current set of slots for the round
-        var brdSlot = guessRow[1]
-        console.log('??????????????',brdSlot);
-        
+        var brdSlot = guessRow[guessRow.length - incrementRound].getElementsByClassName("receptor");
+        // insert slot into the corresponding board slot
+        console.log(brdSlot[guess.length].className = brdSlot[guess.length].className + 'slot' + this.id);
+        // insert user guess as value
+        guess.push(+(this.value));
+
     });
     // console.log(userGuess);
     // compare user guess to code

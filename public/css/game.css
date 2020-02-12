@@ -7,8 +7,46 @@
 }
 
 #rules-text{
-    display: none;;
+    display: none;
 }
 .receptor{
     display: inline;
+}
+#game{
+    background-color: darkgray;
+}
+#code{
+    display: none;
+    background-color: lightgray;
+}
+#guesses{
+    background-color: lightgray;
+}
+.receptor{
+
+}
+
+#red{
+background-color: red;
+height: 25px;
+}
+#blue{
+    background-color: blue;
+    height: 25px;
+}
+#green{
+    background-color: green;
+    height: 25px;
+}
+#orange{
+    background-color: orange;
+    height: 25px;
+}
+#pink{
+    background-color: pink;
+    height: 25px;
+}
+#yellow{
+    background-color: yellow;
+    height: 25px;
 }
