@@ -19,12 +19,13 @@ $(function () {
     // 2 Arrays for generate code to be broken and user guesses
     var code = [];
     var guess = [];
-
+    var guessRow = document.getElementsByClassName("guess-row");
+console.log("^^^^^^^^^^^^^",guessRow);
     // hints
-    var incrementHint = 1;
+    var incrementHint = 0;
 
     // increment rows
-    var incrementRound = 1;
+    var incrementRound = 0;
 
     // user slots
     var slot = {
@@ -44,14 +45,19 @@ $(function () {
     });
     //  generate random code to be broken
     $(function generateCode() {
-        for (i = 0; i < 4; i++) {
+        for (var i = 0; i < 4; i++) {
             code[i] = Math.floor(Math.random() * 7);
         }
     });
     // insert user guess
     $(function userGuess() {
-
+        console.log(guessRow);
+        // get the current set of slots for the round
+        var brdSlot = guessRow[1]
+        console.log('??????????????',brdSlot);
+        
     });
+    // console.log(userGuess);
     // compare user guess to code
     $(function compare() {
 
@@ -68,4 +74,4 @@ $(function () {
     $(function results() {
 
     });
-});
+}); 
