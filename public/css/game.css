@@ -10,9 +10,11 @@
     display: none;
 }
 .main-container{
+    display: none;
    position: relative;
-   display: block;
+   /* display: block; */
     width: 600px;
+    background: tan;
 }
 .receptor{
     display: inline;
@@ -24,9 +26,8 @@
     display: none;
     background-color: lightgray;
 }
-#guesses{
-    float:left;
-    background-color: lightgray;
+.guesses{
+    float: left;
     display: inline;
     border: 500px;
 }
@@ -69,13 +70,12 @@ background: red
     background: yellow;
 }
 
-#hints{
+.hints{
     padding-top: 110px;
     padding-left: 10px;
-    float:left;
+    float: left;
     display: inline-block;
     width: 70px;
-    background: lightgray;
 }
 .hint-fill{
     height: 105px;
@@ -87,4 +87,11 @@ background: red
     width: 25px;
     background-color: darkgray;
     display: inline-block;
+}
+
+.right{
+    background-color: black;
+}
+.close{
+    background-color: grey;
 }
