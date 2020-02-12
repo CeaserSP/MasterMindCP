@@ -9,6 +9,11 @@
 #rules-text{
     display: none;
 }
+.main-container{
+   position: relative;
+   display: block;
+    width: 600px;
+}
 .receptor{
     display: inline;
 }
@@ -20,7 +25,10 @@
     background-color: lightgray;
 }
 #guesses{
+    float:left;
     background-color: lightgray;
+    display: inline;
+    border: 500px;
 }
 .receptor{
 height: 100px;
@@ -28,15 +36,19 @@ width: 100px;
 background-color: darkgray;
 display: inline-block;
 }
+.btn-group{
+    clear: left;
+}
 .button{
     height: 50px;
     width: 70px;
+    
 }
 .red,
 #red{
 background: red
 }
-.blue
+.blue,
 #blue{
     background: blue;
 }
@@ -55,4 +67,24 @@ background: red
 .yellow,
 #yellow{
     background: yellow;
+}
+
+#hints{
+    padding-top: 110px;
+    padding-left: 10px;
+    float:left;
+    display: inline-block;
+    width: 70px;
+    background: lightgray;
+}
+.hint-fill{
+    height: 105px;
+
+    padding-bottom: 10px;
+}
+.hint-receptor{
+    height: 45px;
+    width: 25px;
+    background-color: darkgray;
+    display: inline-block;
 }

@@ -15,7 +15,7 @@ $("#btn-rules").on('click', function (event) {
     $("#rules-text").toggle();
 });
 
-$(document).ready(function(){
+$(document).ready(function () {
     // 2 Arrays for generate code to be broken and user guesses
     var code = [];
     var guess = [];
@@ -54,7 +54,18 @@ $(document).ready(function(){
         // insert user guess as value
         guess.push(+(this.value));
         // console.log(this.value);
+        // increment Round
+        if (guess.length === 4) {
+            // call compare
+            if(compare()){
+                
+            }
+            incrementRound += 1;
+            guess = []
+        };
+        console.log(incrementRound);
     });
+
     // game setup
     function gameSetup() {
         generateCode(1, 6);
@@ -95,7 +106,26 @@ $(document).ready(function(){
     // console.log(userGuess);
     // compare user guess to code
     function compare() {
-
+        isMatch = true;
+        checkCode = code.slice(0);
+        // check if user guess is the right color and position
+        for (var i = 0; i < code.length; i++) {
+            if (guess[i] === code[i]) {
+                checkCode = 0;
+                guess[i] = 'right'
+                console.log(guess[i])
+            } else {
+                isMatch = false;
+            }
+            // check if user guess is right color but not right postion
+            for (var j = 0; j < code.length; J++) {
+                if (checkCode.indexOf(guess[j]) !== 'right') {
+                    checkCode[checkCode.indexOf(guess[j])] = 0;
+                }
+            }
+            guess = [];
+            return isMatch;
+        }
     };
     // display hints
     function displayHint() {
